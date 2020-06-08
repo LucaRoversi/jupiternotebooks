@@ -1,0 +1,38 @@
+Upgrade pip and install the package by typing:
+
+    sudo -H pip3 install --upgrade pip
+    sudo -H pip3 install virtualenv
+
+With virtualenv installed, we can start forming our environment. Create and move into a directory where we can keep our project files:
+
+    mkdir ~/myprojectdir
+    cd ~/myprojectdir
+
+Within the project directory, create a Python virtual environment by typing:
+
+    virtualenv myprojectenv
+
+Before we install Jupyter, we need to activate the virtual environment. You can do that by typing:
+
+
+### ---> inizializzi l'environment che ti interessa conquesto comando:
+    source myprojectenv/bin/activate
+
+With your virtual environment active, install Jupyter with the local instance of pip:
+
+    pip install jupyter
+
+You now have everything you need to run Jupyter Notebook! To run it, execute the following command:
+
+    jupyter notebook
+
+#### Per installare il kernel Java:
+# 1) devi essere inun virtualenv, cioè il prompt deve essere (virtualenv)
+# 2) da dentro il virtualenv, dopo esserti messo nel folder ijava-1.3.0:
+
+python3 install.py --sys-prefix
+
+
+### Verifichi l'esistemza del kernel con:
+
+jupyter console --kernel=java
