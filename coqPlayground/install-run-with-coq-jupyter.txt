@@ -1,0 +1,33 @@
+Upgrade pip and install the package by typing:
+
+    sudo -H pip3 install --upgrade pip
+    sudo -H pip3 install virtualenv
+
+With virtualenv installed, we can start forming our environment. Create and move into a directory where we can keep our project files:
+
+    mkdir ~/coqPlayground
+
+    virtualenv coqPlayground
+
+### Activate the virtual environment.
+     source myprojectenv/bin/activate
+
+With your virtual environment active, install Jupyter with the local instance of pip:
+
+    pip install jupyter
+
+You now have everything you need to run Jupyter Notebook! To run it, execute the following command:
+
+    jupyter notebook
+
+#### Per installare il kernel Coq:
+# devi essere in un virtualenv, cioè il prompt deve essere (virtualenv)
+
+pip install coq-jupyter
+python -m coq_jupyter.install
+
+
+### Verifichi l'esistemza del kernel con:
+
+jupyter kernelspec list
+jupyter console --kernel=coq
